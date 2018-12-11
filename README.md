@@ -1,3 +1,5 @@
+[![Known Vulnerabilities](https://snyk.io/test/github/larskaare/GenerateCSVforWpEventsfromExcel/badge.svg?targetFile=package.json)](https://snyk.io/test/github/larskaare/GenerateCSVforWpEventsfromExcel?targetFile=package.json)
+
 # Generate CSV for WP-Events from Excel
 
 ```Problem```: We are using Excel to coordinate and plan a list of events. When the planning is done we would like to move these events into Events in WordPress.
