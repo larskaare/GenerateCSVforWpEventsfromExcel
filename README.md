@@ -8,19 +8,58 @@
 
 ## Preconditions
 
+* The Excel file need to be using XLSX format
+
 ## Install the application
+
+* Clone this repository
+* Do ```npm install```
+* Read the [configuration section in this document](#Configuration)
+* Update the configuration file in ```./config/config.js```
+* Do ```node app --help``` to get started
 
 ## Run the application
 
+Getting help
 ```node
 node app --help
 ```
-
+Running a basic conversion
 ```node
 node app --xlsx <./excelfilename.xlsx> 
 ```
 
+### Command line options
+
+* --help ```gives help``` 
+* --xlsx xlsxfilname ```specify which Excelfile to read. Overrides whats defined in the configuration file```
+* --csv csvfilename ```If used, file to save csv export. If not used, csv is not written to file. Overrides whats defined in configuration file```
+
 ## Configuration
+
+Configuration is stored in the ```./config.config.js``` file in two sections
+
+## exporter
+
+* ```excelFileName```, filename for excelfile to be converted
+* ```csvFileName```, filename for csv to be written with converted results
+
+Using the --xlsx and --csv command line options will override any settings in the exporter section.
+
+## excel
+
+* ```eventSheetName```, name of the sheet containing events
+* ```eventRange```, the range in which to search for events
+* ```eventColCheck```: the column to check for an event. If this column is empty for a row, the event is not included.
+* ```eventStartDateCol```, the column holding event start date
+* ```eventStartTimeCol```, the column holding event start time
+* ```eventNameCol```, the column holding event name
+* ```eventDescCol```, the column holding event description
+* ```eventLocationCol```, the column holding event location. Must be a valid existing event location in WordPress.
+* ```eventShowMapLinkCol```, the column holding  show link to map on event (TRUE, FALSE)
+* ```eventTimeZone```, A valid time zone for all events.
+
+Default values are defined in the configuration file  as well as in the app code. Columns, and rows, start on 0.
 
 ## Development
 
