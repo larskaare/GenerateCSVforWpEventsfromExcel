@@ -1,0 +1,22 @@
+node_modules/
+.iml
+npm-debug.log
+logs
+*.log
+*.env
+*.sh
+
+### OSX ###
+.DS_STORE
+.AppleDouble
+.LSOverride
+
+### VisualStudioCode ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+##Work dir
+work/*

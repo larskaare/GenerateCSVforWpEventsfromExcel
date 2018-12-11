@@ -1,0 +1,4 @@
+EVENT START DATE,EVENT START TIME,EVENT TIME ZONE,EVENT NAME,EVENT DESCRIPTION,VENUE NAME,EVENT SHOW MAP LINK
+01.01.2019,12:00,Europe/Oslo,Kick-Off,Starting the new year,Main building,TRUE
+03.02.2019,21:00,Europe/Oslo,Kick-Out,Getting kicked out of cafe,Down Town Cafe,FALSE
+21.04.2019,18:00,Europe/Oslo,Celebration,Lets celebrate mr l,Town Hall,TRUE
