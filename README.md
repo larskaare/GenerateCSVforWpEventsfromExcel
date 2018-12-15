@@ -26,7 +26,7 @@ node app --help
 ```
 Running a basic conversion
 ```node
-node app --xlsx <./excelfilename.xlsx> 
+node app --xlsx <excelfilename.xlsx> 
 ```
 
 ### Command line options
@@ -63,6 +63,5 @@ Default values are defined in the configuration file  as well as in the app code
 
 ## Development
 
-* running
-* linting
-* testing
+* Linting of code: ```npm run lint```
+* Running tests: ```npm test```

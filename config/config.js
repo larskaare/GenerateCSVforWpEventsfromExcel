@@ -7,13 +7,13 @@
 'use strict';
 
 exports.exporter = {
-    excelFileName : "",
-    csvFileName: ""
+    excelFileName : '',
+    csvFileName: ''
 };
 
 exports.excel = {
-    eventSheetName : "Events",
-    eventRange : "A5:F100",
+    eventSheetName : 'Events',
+    eventRange : 'A5:F100',
     eventColCheck: 2,
     eventStartDateCol: 0,
     eventStartTimeCol: 1,
@@ -21,5 +21,5 @@ exports.excel = {
     eventDescCol: 3,
     eventLocationCol: 4,
     eventShowMapLinkCol: 5,
-    eventTimeZone: "Europe/Oslo"
+    eventTimeZone: 'Europe/Oslo'
 };

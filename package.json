@@ -4,6 +4,8 @@
   "description": "Convert specific Excel sheet to CSV for import to WP Events",
   "main": "app.js",
   "scripts": {
+    "lint": "node ./node_modules/eslint/bin/eslint.js . --ext .js",
+    "test": "./node_modules/mocha/bin/mocha"
   },
   "repository": {
     "type": "git",
@@ -17,6 +19,8 @@
     "yargs": "^12.0.5"
   },
   "devDependencies": {
-    "eslint": "^5.10.0"
+    "chai": "^4.2.0",
+    "eslint": "^5.10.0",
+    "mocha": "^5.2.0"
   }
 }
