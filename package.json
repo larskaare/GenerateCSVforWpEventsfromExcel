@@ -16,7 +16,7 @@
   "dependencies": {
     "array-to-csv": "^1.0.1",
     "xlsx": "^0.16.0",
-    "yargs": "^13.1.0"
+    "yargs": "^13.3.2"
   },
   "devDependencies": {
     "chai": "^4.2.0",
