@@ -13,21 +13,23 @@ var expect = require('chai').expect;
 
 describe('Converting Testfile with standard config', function () {
 
-    var configFile = require('../config/config');
+    var configFile = require('../config/config').excelDefault;
     var config = {};
 
     config.xlsxFile = ('./test/files/example1.xlsx');
-    config.eventSheetName = (configFile.excel.eventSheetName);
-    config.eventRange = (configFile.excel.eventRange);
-    config.eventColCheck = (configFile.excel.eventColCheck);
-    config.eventStartDateCol = (configFile.excel.eventStartDateCol);
-    config.eventStartTimeCol = (configFile.excel.eventStartTimeCol);
-    config.eventNameCol = (configFile.excel.eventNameCol);
-    config.eventDescCol = (configFile.excel.eventDescCol);
-    config.eventLocationCol = (configFile.excel.eventLocationCol);
-    config.eventShowMapLinkCol = (configFile.excel.eventShowMapLinkCol);
-    config.eventTimeZone = (configFile.excel.eventTimeZone);
+    config.eventSheetName = (configFile.eventSheetName);
+    config.eventRange = (configFile.eventRange);
+    config.eventColCheck = (configFile.eventColCheck);
+    config.eventStartDateCol = (configFile.eventStartDateCol);
+    config.eventStartTimeCol = (configFile.eventStartTimeCol);
+    config.eventNameCol = (configFile.eventNameCol);
+    config.eventDescCol = (configFile.eventDescCol);
+    config.eventLocationCol = (configFile.eventLocationCol);
+    config.eventShowMapLinkCol = (configFile.eventShowMapLinkCol);
+    config.eventTimeZone = (configFile.eventTimeZone);
         
+    console.log(config);
+
     var eventArray = converter(config);
 
     it('first row shouled be a proper header row', function () {

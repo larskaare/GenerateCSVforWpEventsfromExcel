@@ -24,7 +24,7 @@ exports.excel = {
     eventTimeZone: 'Europe/Oslo'
 };
 
-exports.excelA1 = {
+exports.excelDefault = {
     eventSheetName : 'Events',
     eventRange : 'A5:F100',
     eventColCheck: 2,
