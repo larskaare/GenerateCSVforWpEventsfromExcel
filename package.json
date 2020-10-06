@@ -15,7 +15,7 @@
   "license": "MIT",
   "dependencies": {
     "array-to-csv": "^1.0.1",
-    "xlsx": "^0.16.0",
+    "xlsx": "^0.16.7",
     "yargs": "^13.1.0"
   },
   "devDependencies": {
