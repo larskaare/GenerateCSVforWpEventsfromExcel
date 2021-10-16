@@ -71,6 +71,8 @@ Default values are defined in the configuration file  as well as in the app code
 
 ### Build a local image
 
+Image name we give is **gwpcsv**. Remember to update the [config file](#Configuration) according to your Excel file definition prior to building.
+
 ```node
 docker build -t gwpcsv .
 ```
@@ -84,3 +86,5 @@ Notice the volume where the app expects to read xlsx files
 ```node
 docker run --rm --name gwpcsv -v $PWD:/usr/src/app gwpcsv --xlsx ./(xlsx file)
 ```
+
+Using the --csv (filename) to export will work fine. Provide a filename relative to the volume you mounted to Docker run.
