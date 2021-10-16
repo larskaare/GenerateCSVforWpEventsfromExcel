@@ -13,7 +13,7 @@ var expect = require('chai').expect;
 
 describe('Converting Testfile with standard config', function () {
 
-    var configFile = require('../config/config').excelDefault;
+    var configFile = require('../config/config').excelTest;
     var config = {};
 
     config.xlsxFile = ('./test/files/example1.xlsx');

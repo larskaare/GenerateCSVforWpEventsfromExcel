@@ -1,9 +1,10 @@
 {
   "name": "GenerateCSVforWpEventsfromExcel",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "Convert specific Excel sheet to CSV for import to WP Events",
   "main": "app.js",
   "scripts": {
+    "start": "node app",
     "lint": "node ./node_modules/eslint/bin/eslint.js . --ext .js",
     "test": "mocha",
     "snyk": "snyk test"
