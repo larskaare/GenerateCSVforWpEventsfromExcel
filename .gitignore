@@ -5,6 +5,7 @@ logs
 *.log
 *.env
 *.sh
+.nyc_output
 
 ### OSX ###
 .DS_STORE

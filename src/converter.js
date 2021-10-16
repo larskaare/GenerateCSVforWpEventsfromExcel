@@ -45,46 +45,62 @@ function converter(config) {
 
     //Checking if the Excelfile exists
     try {
-        var workbook = XLSX.readFile(config.xlsxFile,{dateNF:false});
+        var workbook = XLSX.readFile(config.xlsxFile,{dateNF:false}); 
+           
     } catch(err) {
         console.log('Error reading Excel file %s (%s)',config.xlsxFile,err.message);
-        process.exit(1);
+        exitHandler();
     }
 
-    var worksheet = workbook.Sheets[config.eventSheetName];
-    worksheet['!ref'] = config.eventRange;
-    
-    var sheetArray = sheet2arr(config.eventColCheck,worksheet);
+    try {
 
-    var eventArray = [];
-    
-    var headerRow = [];
-    headerRow.push('EVENT START DATE');
-    headerRow.push('EVENT START TIME');
-    headerRow.push('EVENT TIME ZONE');
-    headerRow.push('EVENT NAME');
-    headerRow.push('EVENT DESCRIPTION');
-    headerRow.push('VENUE NAME');
-    headerRow.push('EVENT SHOW MAP LINK');
-    eventArray.push(headerRow);
-    
-    for (var rowNum = 0; rowNum < sheetArray.length; rowNum++) {
-        // console.log(sheetArray[rowNum]);
-        var newRow = [];
-    
-        newRow.push(sheetArray[rowNum][config.eventStartDateCol]);     //Start date
-        newRow.push(sheetArray[rowNum][config.eventStartTimeCol]);     //Start time
-        newRow.push(config.eventTimeZone);                             //Time Zone
-        newRow.push(sheetArray[rowNum][config.eventNameCol]);          //Event name
-        newRow.push(sheetArray[rowNum][config.eventDescCol]);          //Event description
-        newRow.push(sheetArray[rowNum][config.eventLocationCol]);      //Event location
-        newRow.push(sheetArray[rowNum][config.eventShowMapLinkCol]);   //Show map link
-        
-        eventArray.push(newRow);
+        var worksheet = workbook.Sheets[config.eventSheetName];
+        worksheet['!ref'] = config.eventRange;
+
+        var sheetArray = sheet2arr(config.eventColCheck, worksheet);
+
+        var eventArray = [];
+
+        var headerRow = [];
+        headerRow.push('EVENT START DATE');
+        headerRow.push('EVENT START TIME');
+        headerRow.push('EVENT TIME ZONE');
+        headerRow.push('EVENT NAME');
+        headerRow.push('EVENT DESCRIPTION');
+        headerRow.push('VENUE NAME');
+        headerRow.push('EVENT SHOW MAP LINK');
+        eventArray.push(headerRow);
+
+        for (var rowNum = 0; rowNum < sheetArray.length; rowNum++) {
+            // console.log(sheetArray[rowNum]);
+            var newRow = [];
+
+            newRow.push(sheetArray[rowNum][config.eventStartDateCol]); //Start date
+            newRow.push(sheetArray[rowNum][config.eventStartTimeCol]); //Start time
+            newRow.push(config.eventTimeZone); //Time Zone
+            newRow.push(sheetArray[rowNum][config.eventNameCol]); //Event name
+            newRow.push(sheetArray[rowNum][config.eventDescCol]); //Event description
+            newRow.push(sheetArray[rowNum][config.eventLocationCol]); //Event location
+            newRow.push(sheetArray[rowNum][config.eventShowMapLinkCol]); //Show map link
+
+            eventArray.push(newRow);
+        }
+
+        return eventArray;    
+
+    } catch(err) {
+
+        console.log(
+            'Conversion failer (err.message)');
+        return [];
+
     }
+  
 
-    return eventArray;
+}
 
+function exitHandler() {
+    process.exit(1);
 }
 
 module.exports = converter;

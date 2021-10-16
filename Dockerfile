@@ -18,7 +18,7 @@ RUN npm install
 FROM dependencies as test
 WORKDIR /usr/src/app
 COPY test test
-RUN npm test
+RUN npm test ./test
 COPY .eslintrc.json .eslintignore ./
 RUN npm run lint
 
