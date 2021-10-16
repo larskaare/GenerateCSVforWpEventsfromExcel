@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "lint": "node ./node_modules/eslint/bin/eslint.js . --ext .js",
-    "test": "./node_modules/mocha/bin/mocha"
+    "test": "mocha",
+    "snyk": "snyk test"
   },
   "repository": {
     "type": "git",
@@ -16,12 +17,12 @@
   "dependencies": {
     "array-to-csv": "^1.0.1",
     "xlsx": "^0.17.0",
-    "yargs": "^16.0.0"
+    "yargs": "^17.2.1"
   },
   "devDependencies": {
     "chai": "^4.2.0",
-    "eslint": "^5.10.0",
-    "mocha": "^8.1.3",
+    "eslint": "^8.0.1",
+    "mocha": "^9.1.3",
     "snyk": "^1.672.0"
   }
 }
