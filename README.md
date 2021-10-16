@@ -65,3 +65,22 @@ Default values are defined in the configuration file  as well as in the app code
 
 * Linting of code: ```npm run lint```
 * Running tests: ```npm test```
+
+
+## Docker
+
+### Build a local image
+
+```node
+docker build -t gwpcsv .
+```
+
+### Run the local image
+
+Example:
+
+Notice the volume where the app expects to read xlsx files
+
+```node
+docker run --rm --name gwpcsv -v $PWD:/usr/src/app gwpcsv --xlsx ./(xlsx file)
+```
