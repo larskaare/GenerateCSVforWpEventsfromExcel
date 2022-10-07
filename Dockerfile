@@ -1,5 +1,5 @@
 #- Building base layer
-FROM node:16-alpine3.14 AS base
+FROM node:16.17.1-alpine3.16 AS base
 WORKDIR /usr/src/app
 RUN mkdir -p ./config ./src 
 COPY package.json package-lock.json ./
