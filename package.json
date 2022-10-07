@@ -1,6 +1,6 @@
 {
     "name": "GenerateCSVforWpEventsfromExcel",
-    "version": "0.6.0",
+    "version": "0.7.0",
     "description": "Convert specific Excel sheet to CSV for import to WP Events",
     "main": "app.js",
     "scripts": {
